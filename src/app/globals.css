@@ -12,8 +12,13 @@ html, body {
   height: 100%;
 }
 
+body {
+  background-color: rgb(248 250 252);
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+  
