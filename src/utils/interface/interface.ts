@@ -1,12 +1,13 @@
 export interface NavigationItem {
   name: string;
   path: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
   enabled?: boolean;
 }
 
 export interface NavbarProps {
   children: React.ReactNode;
+  navigationItems: React.ReactNode;
 }
 
 export interface VideoProps {
