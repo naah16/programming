@@ -23,7 +23,7 @@ const LeftbarHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6", className)}
+    className={cn("flex h-14 items-center border-b px-4 text-slate-700 lg:h-[60px] lg:px-6", className)}
     {...props}
   />
 ));
@@ -47,7 +47,7 @@ const LeftbarContent = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <nav
     ref={ref}
-    className={cn("grid gap-2 items-start px-2 text-sm font-medium lg:px-4", className)}
+    className={cn("grid gap-2 items-start px-2 text-sm font-medium text-slate-700 lg:px-4", className)}
     {...props}
   />
 ));
