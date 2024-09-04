@@ -1,13 +1,21 @@
+'use client'
+
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Play } from 'lucide-react';
-import { playlists } from "@/app/playlists/data";
+import { Play } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import useFetch from "@/hooks/fetch";
 
 export const Modulos = () => {
+  const { data: playlists, error, isLoading } = useFetch(`http://localhost:8080/playlists`, true);
+
+  if (isLoading) return <p>Carregando...</p>;
+
+  if (error) return <p>Erro ao carregar os dados.</p>;
+
   return (
     <div className="flex flex-wrap gap-4">
-      {playlists.map((playlist) => (
+      {playlists?.map((playlist: any) => (
         <Card
           key={playlist.id}
           className="relative max-w-[250px] overflow-hidden"
@@ -15,8 +23,8 @@ export const Modulos = () => {
           <div className="relative group">
             <CardContent className="p-0">
               <Image
-                src={playlist.src}
-                alt={playlist.description}
+                src={"/img/placeholder.svg"}
+                alt={playlist.videos.map((m: any) => m.description)}
                 width={400}
                 height={200}
                 className="rounded-t-lg"
