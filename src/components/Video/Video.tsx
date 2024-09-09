@@ -1,4 +1,4 @@
-import { VideoProps } from "@/utils/interface";
+import { VideoProps } from "@/utils/interface/interface";
 
 export function Video({ src, width, height, title, className, style }: VideoProps) {
   return (

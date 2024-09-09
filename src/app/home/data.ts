@@ -3,13 +3,13 @@ const videos = [
     id: 1,
     title: "Video 1",
     description: "This is a video",
-    src: "https://www.youtube.com/embed/Dzf_3HbygAI?si=MT8iC2lMMPaoXMWu"
+    src: "https://www.youtube.com/embed/C0DPdy98e4c?si=1xSdiu53u12m8edn"
   },
   {
     id: 2,
     title: "Video 2",
     description: "This is another video",
-    src: "https://www.youtube.com/embed/AgVvbVs6y0Y?si=aXkpmlrVZCefftP0"
+    src: "https://www.youtube.com/embed/fDm8JdCAPeM?si=JLNXnkcaOK3DfML6"
   }
 ];
 

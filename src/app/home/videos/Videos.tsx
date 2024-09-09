@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Video } from "@/components/Video/Video";
+import { Video } from "@/components/video/Video";
 import videos from "@/app/home/data";
 
 export const Videos = () => {
