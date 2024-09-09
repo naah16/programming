@@ -3,19 +3,19 @@
     {
       "id": 1,
       "description": "Playlist do módulo 1",
-      "src": "/img/placeholder.svg",
+      "src": "https://img.youtube.com/vi/oEMSF4jmvC4/sddefault.jpg",
       "videos": [
         {
           "id": 1,
-          "title": "Introdução ao Módulo 1",
-          "url": "https://drive.google.com/file/d/1FwsdscUQ6yl3Ekm46XVvcqs_6MJryn4Y/preview",
-          "description": "Este é o vídeo de introdução do módulo 1."
+          "title": "Aula Condicional",
+          "url": "https://www.youtube.com/embed/oEMSF4jmvC4?si=Jb6m8zqjio3UGc2P",
+          "description": "Este é o vídeo de introdução do módulo 1, trata-se sobre aula condicional."
         },
         {
           "id": 2,
-          "title": "Aula 1 do Módulo 1",
-          "url": "https://drive.google.com/file/d/1PPyQi3LaYk0DXVCdY_vipLBkb94kJwpA/preview",
-          "description": "Este é o vídeo da aula 1 do módulo 1."
+          "title": "Aula 2 do Módulo 1",
+          "url": "https://www.youtube.com/embed/C0DPdy98e4c?si=1xSdiu53u12m8edn",
+          "description": "Este é o vídeo 2 do módulo 1."
         }
       ]
     },
@@ -27,13 +27,13 @@
         {
           "id": 1,
           "title": "Introdução ao Módulo 2",
-          "url": "https://exemplo.com/modulo2/video1.mp4",
+          "url": "https://www.youtube.com/embed/C0DPdy98e4c?si=1xSdiu53u12m8edn",
           "description": "Este é o vídeo de introdução do módulo 2."
         },
         {
           "id": 2,
           "title": "Aula 1 do Módulo 2",
-          "url": "https://exemplo.com/modulo2/video2.mp4",
+          "url": "https://www.youtube.com/embed/C0DPdy98e4c?si=1xSdiu53u12m8edn",
           "description": "Este é o vídeo da aula 1 do módulo 2."
         }
       ]
@@ -46,13 +46,13 @@
         {
           "id": 1,
           "title": "Introdução ao Módulo 3",
-          "url": "https://exemplo.com/modulo3/video1.mp4",
+          "url": "https://www.youtube.com/embed/C0DPdy98e4c?si=1xSdiu53u12m8edn",
           "description": "Este é o vídeo de introdução do módulo 3."
         },
         {
           "id": 2,
           "title": "Aula 1 do Módulo 3",
-          "url": "https://exemplo.com/modulo3/video2.mp4",
+          "url": "https://www.youtube.com/embed/C0DPdy98e4c?si=1xSdiu53u12m8edn",
           "description": "Este é o vídeo da aula 1 do módulo 3."
         }
       ]
