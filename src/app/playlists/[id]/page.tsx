@@ -17,12 +17,12 @@ interface Video {
 
 interface ModulosPageProps {
   params: {
-    id: string;
+    id: number;
   };
 }
 
-const NavigationItems = ({ params }: { params: { id: string } }) => {
-  const { data: moduleData } = useFetch(`http://localhost:8080/playlists/${params.id}`, true);
+const NavigationItems = ({ params }: { params: { id: number } }) => {
+  const { data: moduleData } = useFetch(`https://backend-arduino-api.onrender.com/playlist/${params.id}`, true);
   const videos = moduleData?.videos || [];
   const pathname = usePathname();
 
@@ -59,7 +59,7 @@ const NavigationItems = ({ params }: { params: { id: string } }) => {
 };
 
 export default function ModulosPage({ params }: ModulosPageProps) {
-  const { data: moduleData, isLoading, error } = useFetch(`http://localhost:8080/playlists/${params.id}`, true);
+  const { data: moduleData, isLoading, error } = useFetch(`https://backend-arduino-api.onrender.com/playlist/${params.id}`, true);
   const router = useRouter();
 
   if (error) {

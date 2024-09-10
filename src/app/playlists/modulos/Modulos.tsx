@@ -7,7 +7,7 @@ import Image from "next/image";
 import useFetch from "@/hooks/fetch";
 
 export const Modulos = () => {
-  const { data: playlists, error, isLoading } = useFetch(`http://localhost:8080/playlists`, true);
+  const { data: playlists, error, isLoading } = useFetch(`https://backend-arduino-api.onrender.com/playlist`, true);
 
   const thumbnail = playlists?.map((playlist: any) => playlist.src);
 
@@ -24,15 +24,16 @@ export const Modulos = () => {
         >
           <div className="relative group">
             <CardContent className="p-0">
-              <div className="w-full h-[248px] overflow-hidden bg-black">
+              <div className="w-full h-[200px] overflow-hidden bg-white">
                 <Image
                   loader={() => thumbnail && thumbnail[playlist.id - 1]}
                   src={thumbnail && thumbnail[playlist.id - 1]}
-                  alt={playlist.videos.map((m: any) => m.description)}
+                  alt={playlist.description}
                   width={400}
                   height={200}
                   className="rounded-t-lg w-full h-full object-contain"
                   unoptimized={true}
+                  priority={true}
                 />
               </div>
             </CardContent>

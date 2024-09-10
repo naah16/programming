@@ -1,15 +1,17 @@
 'use client'
 
 import { Navbar } from '@/components/navbar/Navbar';
+import { cn } from '@/lib/utils';
 
 export interface TemplatePlaylistProps {
   children: React.ReactNode;
   navigationItems: React.ReactNode;
+  className?: string;
 }
 
-export const TemplatePlaylist = ({ children, navigationItems }: TemplatePlaylistProps) => {
+export const TemplatePlaylist = ({ children, navigationItems, className }: TemplatePlaylistProps) => {
   return (
-    <div className="h-full">
+    <div className={cn(className, "h-full")}>
       <Navbar
         navigationItems={navigationItems}
       >

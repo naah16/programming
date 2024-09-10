@@ -22,8 +22,8 @@ interface Video {
   description: string;
 }
 
-const NavigationItems = ({ params }: { params: { id: string } }) => {
-  const { data: moduleData } = useFetch(`http://localhost:8080/playlists/${params.id}`, true);
+const NavigationItems = ({ params }: { params: { id: number } }) => {
+  const { data: moduleData } = useFetch(`https://backend-arduino-api.onrender.com/playlist/${params.id}`, true);
   const videos = moduleData?.videos || [];
   const pathname = usePathname();
 
@@ -59,29 +59,49 @@ const NavigationItems = ({ params }: { params: { id: string } }) => {
   );
 };
 
-export default function VideoPage({ params }: { params: { id: string } }) {
+export default function VideoPage({ params }: { params: { id: number } }) {
   const pathname = usePathname();
   const pathSegments = pathname.split('/'); // Dividindo o pathname para pegar os parâmetros da URL
   const playlistId = pathSegments[2]; // Pegando o ID da playlist
   const videoId = pathSegments[4]; // Pegando o ID do vídeo
 
   // Buscar os dados da playlist específica
-  const { data: playlistData, isLoading, error } = useFetch(`http://localhost:8080/playlists/${playlistId}`, true);
+  const { data: playlistData, isLoading, error } = useFetch(`https://backend-arduino-api.onrender.com/playlist/${playlistId}`, true);
 
-  if (error) return <p>Erro ao carregar os dados.</p>;
+  if (error) {
+    return (
+      <TemplatePlaylist navigationItems={<NavigationItems params={params} />}>
+        <p>Erro ao carregar os dados.</p>
+      </TemplatePlaylist>    
+    );
+  } 
 
-  if (isLoading) return <p>Carregando...</p>;
+  if (isLoading) {
+    return (
+      <TemplatePlaylist navigationItems={<NavigationItems params={params} />}>
+        <p>Carregando...</p>
+      </TemplatePlaylist>
+    );
+  }
 
   // Encontrar o vídeo pelo videoId
   const video = playlistData?.videos.find((v: VideoProps) => v.id === Number(videoId));
 
   return (
-    <TemplatePlaylist navigationItems={<NavigationItems params={params} />}>
+    <TemplatePlaylist
+      navigationItems={<NavigationItems params={params} />}
+      className="text-slate-700"
+    >
       {video ? (
         <>
           <h2 className="text-xl font-semibold">{video.title}</h2>
-          <Video height="500" width="auto" src={video.url} title={video.title} />
-          <h3 className="text-lg">Descrição do vídeo:</h3>
+          <Video
+            height="500"
+            width="auto"
+            src={video.url}
+            title={video.title}
+          />
+          <h3 className="text-lg font-semibold">Descrição do vídeo:</h3>
           <p>{video.description}</p>
         </>
       ) : (
