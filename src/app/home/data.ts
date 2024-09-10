@@ -1,16 +1,16 @@
 const videos = [
   {
     id: 1,
-    title: "Video 1",
-    description: "This is a video",
-    src: "https://www.youtube.com/embed/C0DPdy98e4c?si=1xSdiu53u12m8edn"
+    title: "Vídeo 1 - Estruturas Condicionais",
+    description: "Estruturas condicionais em programação permitem que o código execute ações diferentes com base em uma condição.",
+    src: "https://www.youtube-nocookie.com/embed/oEMSF4jmvC4?si=RPpSUAlGhmo7qcJt"
   },
   {
     id: 2,
-    title: "Video 2",
-    description: "This is another video",
-    src: "https://www.youtube.com/embed/fDm8JdCAPeM?si=JLNXnkcaOK3DfML6"
-  }
+    title: "Vídeo 2 - Estruturas Condicionais",
+    description: "Estruturas condicionais em programação permitem que o código execute ações diferentes com base em uma condição.",
+    src: "https://www.youtube-nocookie.com/embed/oEMSF4jmvC4?si=RPpSUAlGhmo7qcJt"
+  },
 ];
 
 export default videos;

@@ -18,10 +18,10 @@ export const CarouselPlugin = () => {
   )
 
   const images = [
-    { src: "/img/carousel/code-1.jpg", alt: "Imagem de código" },
-    { src: "/img/carousel/code-2.jpg", alt: "Imagem de ajuda de código" },
-    { src: "/img/carousel/work-1.jpg", alt: "Imagem de mesa de trabalho" },
-    { src: "/img/carousel/work-2.jpg", alt: "Imagem de um homem olhando o computador" }
+    { src: "/img/placeholder.svg", alt: "Imagem 1 do carrossel" },
+    { src: "/img/placeholder.svg", alt: "Imagem 2 do carrossel" },
+    { src: "/img/placeholder.svg", alt: "Imagem 3 do carrossel" },
+    { src: "/img/placeholder.svg", alt: "Imagem 4 do carrossel" }
   ];
 
   return (
@@ -37,7 +37,7 @@ export const CarouselPlugin = () => {
             <Card>
               <CardContent className="flex aspect-square items-center justify-center p-6">
                 <Image 
-                  src={"/img/placeholder.svg"}
+                  src={image.src}
                   alt={image.alt}
                   width={400}
                   height={200}
